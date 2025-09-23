@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "WebFetch(domain:qiita.com)",
+      "Bash(lsof:*)",
+      "Bash(npx:*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/sio/PrivateProject/fbe-iroiro/irofe/.claude/bin/claude-notify.sh 'クロードコードが呼んでいます。'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/sio/PrivateProject/fbe-iroiro/irofe/.claude/bin/claude-notify.sh 'すべてのタスクが終了しました。'"
+          }
+        ]
+      }
+    ]
+  },
+  "outputStyle": "Learning"
+}
